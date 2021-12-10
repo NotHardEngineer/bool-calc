@@ -13,91 +13,11 @@
   <property name="windowTitle">
    <string>Widget</string>
   </property>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>261</x>
-     <y>271</y>
-     <width>126</width>
-     <height>49</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="firstElement_Box">
-    <item>
-     <widget class="QLabel" name="firstElement_Label">
-      <property name="text">
-       <string>Первая переменная</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <layout class="QHBoxLayout" name="firstElement_Layout">
-      <item>
-       <widget class="QRadioButton" name="firstElementTrue">
-        <property name="text">
-         <string>True</string>
-        </property>
-        <property name="checked">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QRadioButton" name="firstElementFalse">
-        <property name="text">
-         <string>False</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QWidget" name="layoutWidget_2">
-   <property name="geometry">
-    <rect>
-     <x>590</x>
-     <y>270</y>
-     <width>126</width>
-     <height>49</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="secondElement_Box">
-    <item>
-     <widget class="QLabel" name="secondElement_Label">
-      <property name="text">
-       <string>Вторая переменная</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <layout class="QHBoxLayout" name="secondElement_Layout">
-      <item>
-       <widget class="QRadioButton" name="secondElementTrue">
-        <property name="text">
-         <string>True</string>
-        </property>
-        <property name="checked">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QRadioButton" name="secondElementFalse">
-        <property name="text">
-         <string>False</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-   </layout>
-  </widget>
   <widget class="QComboBox" name="oprators_ComboBox">
    <property name="geometry">
     <rect>
-     <x>420</x>
-     <y>290</y>
+     <x>449</x>
+     <y>296</y>
      <width>75</width>
      <height>24</height>
     </rect>
@@ -132,32 +52,11 @@
      <string>NOR</string>
     </property>
    </item>
-  </widget>
-  <widget class="QCheckBox" name="firstElementNot_CheckBox">
-   <property name="geometry">
-    <rect>
-     <x>200</x>
-     <y>290</y>
-     <width>51</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>NOT</string>
-   </property>
-  </widget>
-  <widget class="QCheckBox" name="secondElementNot_CheckBox">
-   <property name="geometry">
-    <rect>
-     <x>530</x>
-     <y>290</y>
-     <width>51</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>NOT</string>
-   </property>
+   <item>
+    <property name="text">
+     <string>NOT</string>
+    </property>
+   </item>
   </widget>
   <widget class="QLabel" name="error_Label">
    <property name="geometry">
@@ -194,6 +93,72 @@
       <property name="readOnly">
        <bool>true</bool>
       </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>262</x>
+     <y>272</y>
+     <width>120</width>
+     <height>49</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="firstElement_Layout">
+    <item>
+     <widget class="QLabel" name="firstElement_Label">
+      <property name="text">
+       <string>Первая переменная</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="firstElement_comboBox">
+      <item>
+       <property name="text">
+        <string>True</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>False</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>270</y>
+     <width>118</width>
+     <height>49</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="secondElement_Layout">
+    <item>
+     <widget class="QLabel" name="secondElement_Label">
+      <property name="text">
+       <string>Вторая переменная</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="secondElement_comboBox">
+      <item>
+       <property name="text">
+        <string>True</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>False</string>
+       </property>
+      </item>
      </widget>
     </item>
    </layout>

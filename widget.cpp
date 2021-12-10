@@ -28,29 +28,20 @@ void Widget::resultPrint(bool res){
 void Widget::calculate(){
     int operand = ui->oprators_ComboBox->currentIndex();
     bool firstElement = 0, secondElement = 0;
-
-
-    if (ui->firstElementTrue->isChecked()){
+    if(ui->firstElement_comboBox->currentIndex() == 0){
         firstElement = 1;
     }
-    else{
+    else {
         firstElement = 0;
     }
-    if(ui->secondElementTrue->isChecked()){
+    if(ui->secondElement_comboBox->currentIndex() == 0){
         secondElement = 1;
     }
-    else{
+    else {
         secondElement = 0;
     }
-
-
-    if (ui->firstElementNot_CheckBox->isChecked()){
-        firstElement = !firstElement;
-    }
-    if (ui->secondElementNot_CheckBox->isChecked()){
-        secondElement = !secondElement;
-    }
-
+    ui->firstElement_Label->setVisible(1);
+    ui->firstElement_comboBox->setVisible(1);
     switch (operand) {
     case 0:
         resultPrint(firstElement or secondElement);
@@ -70,34 +61,16 @@ void Widget::calculate(){
     case 5:
         resultPrint(not(firstElement) and not(secondElement));
         break;
+    case 6:
+        ui->firstElement_Label->setVisible(0);
+        ui->firstElement_comboBox->setVisible(0);
+        resultPrint(not(secondElement));
+        break;
     }
 }
 
 
 
-void Widget::on_firstElementTrue_clicked()
-{
-    calculate();
-}
-
-
-void Widget::on_firstElementFalse_clicked()
-{
-    calculate();
-}
-
-
-void Widget::on_secondElementTrue_clicked()
-{
-    calculate();
-
-}
-
-
-void Widget::on_secondElementFalse_clicked()
-{
-    calculate();
-}
 
 void Widget::on_oprators_ComboBox_currentIndexChanged(int index)
 {
@@ -105,14 +78,15 @@ void Widget::on_oprators_ComboBox_currentIndexChanged(int index)
 }
 
 
-void Widget::on_firstElementNot_CheckBox_stateChanged(int arg1)
+
+
+void Widget::on_firstElement_comboBox_currentIndexChanged(int index)
 {
     calculate();
 }
 
 
-
-void Widget::on_secondElementNot_CheckBox_stateChanged(int arg1)
+void Widget::on_secondElement_comboBox_currentIndexChanged(int index)
 {
     calculate();
 }

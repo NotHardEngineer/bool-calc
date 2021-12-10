@@ -20,19 +20,10 @@ private slots:
 
     void resultPrint(bool res);
 
-    void on_firstElementTrue_clicked();
-
-    void on_firstElementFalse_clicked();
-
-    void on_secondElementTrue_clicked();
-
-    void on_secondElementFalse_clicked();
-
     void on_oprators_ComboBox_currentIndexChanged(int index);
+    void on_firstElement_comboBox_currentIndexChanged(int index);
 
-    void on_firstElementNot_CheckBox_stateChanged(int arg1);
-
-    void on_secondElementNot_CheckBox_stateChanged(int arg1);
+    void on_secondElement_comboBox_currentIndexChanged(int index);
 
 private:
     Ui::Widget *ui;
